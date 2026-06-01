@@ -1,0 +1,38 @@
+# OpenSpec Configuration — Subneteo-VLSM
+project: Subneteo-VLSM
+description: Python CLI subnet VLSM calculator
+mode: hybrid
+strict_tdd: false
+created: 2026-06-01
+
+stack:
+  language: Python
+  version: "3.7+"
+  modules:
+    - ipaddress (stdlib)
+    - math (stdlib)
+  dependencies: none
+  packaging: none
+
+testing:
+  runner: none
+  strict_tdd: false
+  reason: No test runner detected for this project
+
+persistence:
+  engram:
+    project: Subneteo-VLSM
+    session_id_prefix: sdd-init
+  openspec:
+    path: openspec/
+    config: openspec/config.yaml
+
+sd_context:
+  project_name: Subneteo-VLSM
+  project_path: /home/yokonad/yndhome/Subneteo-VLSM
+  entry_point: main.py (226 lines)
+  architecture: Single-file CLI, functions for validation and calculation
+  conventions:
+    - Spanish UI labels and output
+    - IPv4 only, prefixes 1-30
+    - /30 for point-to-point links
